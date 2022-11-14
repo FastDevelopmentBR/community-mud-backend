@@ -1,35 +1,34 @@
-import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
-dotenv.config()
 import { DataSource, DataSourceOptions } from 'typeorm';
-import { SeederOptions } from 'typeorm-extension';
-
-console.log(__dirname + '/**/*.entity{.ts,.js}');
-
-const options: DataSourceOptions & SeederOptions = {
-    type: 'mysql',
-    host: 'localhost',
-    port: 3306,
-    username: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: 'communitymud',
-    entities: [
-        __dirname + '/../**/*.entity{.ts,.js}'
-    ],
-
-    // #TODO: Remover synchronize true em produção para não perder 
-    // informações no banco de dados a cada alteração de model?
-    synchronize: true,
-
-    seeds: ['src/database/seeds/**/*{.ts,.js}'],
-    factories: ['src/database/factories/**/*{.ts,.js}']
-}
+import { runSeeders, SeederOptions } from 'typeorm-extension';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
 export const databaseProviders = [
     {
         provide: 'DATA_SOURCE',
-        useFactory: async () => {
-            const dataSource = new DataSource(options);
-            return dataSource.initialize();
+        imports: [ConfigModule],
+        inject: [ConfigService],
+        useFactory: async (configService: ConfigService) => {
+            const options: DataSourceOptions & SeederOptions = {
+                type: 'mysql',
+                host: configService.get('database.host'),
+                port: configService.get('database.port'),
+                username: configService.get('database.username'),
+                password: configService.get('database.password'),
+                database: 'communitymud',
+                entities: [
+                    __dirname + '/../**/*.entity{.ts,.js}'
+                ],
+
+                // #TODO: Ativar synchronize apenas para gerar seeds no primeiro start do servidor.
+                synchronize: false,
+
+                seeds: ['src/database/seeds/*{.ts,.js}'],
+                factories: ['src/database/factories/*{.ts,.js}']
+            }
+
+            const dataSource = await new DataSource(options).initialize();
+            if (options.synchronize) runSeeders(dataSource)
+            return dataSource;
         },
     },
 ];
