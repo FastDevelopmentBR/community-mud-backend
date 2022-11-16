@@ -1,10 +1,11 @@
 # community-mud-backend
 Backend para MultiUser Dungeon, rpg baseado em texto.
 
-<!-- <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+<a href="http://nestjs.com/" target="blank">
+    <img src="https://img.shields.io/static/v1?label=NestJS&message=9.0.0&logo=nestjs&logoColor=red&color=red&style=flat-square" alt="NestJS Version"/>
+</a>
 
+<!-- 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
