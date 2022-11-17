@@ -1,8 +1,15 @@
 # community-mud-backend
 Backend para MultiUser Dungeon, rpg baseado em texto.
 
-<a href="http://nestjs.com/" target="blank">
+## Tecnologias Utilizadas
+<a href="http://nestjs.com/" target="_blank">
     <img src="https://img.shields.io/static/v1?label=NestJS&message=9.0.0&logo=nestjs&logoColor=red&color=red&style=flat-square" alt="NestJS Version"/>
+</a>
+
+## Licença
+<a href="https://www.gnu.org/licenses/quick-guide-gplv3.pt-br.html" target="_blank">
+    <img src="https://img.shields.io/github/license/codecompanybrasil/community-mud-backend?label=Licen%C3%A7a&style=flat-square"
+    alt="Licença GPLv3" />
 </a>
 
 <!-- 
