@@ -97,5 +97,5 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 [![Licença GPLv3](https://img.shields.io/github/license/codecompanybrasil/community-mud-backend?label=Licen%C3%A7a&style=flat-square)](LICENSE)
 
-O link abaixo contém uma tradução (pt-BR) que pode estar desatualizada em relação a versão em inglês utilizada no projeto.
+O link abaixo contém uma tradução (pt-BR) que pode estar desatualizada em relação a versão em inglês utilizada no projeto.<br/>
 [![Licença GPLv3 (pt-BR)](https://img.shields.io/github/license/codecompanybrasil/community-mud-backend?label=Licen%C3%A7a%20(pt-BR)&style=flat-square)](https://www.gnu.org/licenses/quick-guide-gplv3.pt-br.html)
