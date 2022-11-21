@@ -1,17 +1,6 @@
 # community-mud-backend
 Backend para MultiUser Dungeon, rpg baseado em texto.
 
-## Tecnologias Utilizadas
-<a href="http://nestjs.com/" target="_blank">
-    <img src="https://img.shields.io/static/v1?label=NestJS&message=9.0.0&logo=nestjs&logoColor=red&color=red&style=flat-square" alt="NestJS Version"/>
-</a>
-
-## Licença
-<a href="https://www.gnu.org/licenses/quick-guide-gplv3.pt-br.html" target="_blank">
-    <img src="https://img.shields.io/github/license/codecompanybrasil/community-mud-backend?label=Licen%C3%A7a&style=flat-square"
-    alt="Licença GPLv3" />
-</a>
-
 <!-- 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
@@ -55,6 +44,27 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## Inserindo seeds no Banco de Dados
+
+```bash
+$ npm run seed
+```
+
+## Variáveis de Ambiente
+
+Variável | Tipo | Default
+:------- | :--: | :------
+DATABASE_HOST | String | localhost
+DATABASE_PORT | Number | 3306
+DATABASE_USERNAME | String | root
+DATABASE_PASSWORD | String | **sem senha**
+DATABASE_SYNC | Boolean | false
+
+#### Observações sobre **DATABASE_SYNC**
+> **Warning**
+>_Embora a sincronização seja uma boa opção para sincronizar sua entidade com o banco de dados, ela não é segura para bancos de dados de produção. Caso utilize esse projeto em produção opte por implementar migrations ou atualizar pontualmente o banco de dados via comandos._
+
 <!-- 
 ## Test
 
@@ -72,13 +82,21 @@ $ npm run test:cov
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+-->
 
-## Stay in touch
+## Mantenedores
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- [Pablo Pereira](https://github.com/pablopereira27)
 
-## License
+## Tecnologias Utilizadas
 
-Nest is [MIT licensed](LICENSE). -->
+<a href="http://nestjs.com/" target="_blank">
+    <img src="https://img.shields.io/static/v1?label=NestJS&message=9.0.0&logo=nestjs&logoColor=red&color=red&style=flat-square" alt="NestJS Version"/>
+</a>
+
+## Licença
+
+[![Licença GPLv3](https://img.shields.io/github/license/codecompanybrasil/community-mud-backend?label=Licen%C3%A7a&style=flat-square)](LICENSE)
+
+O link abaixo contém uma tradução (pt-BR) que pode estar desatualizada em relação a versão em inglês utilizada no projeto.
+[![Licença GPLv3 (pt-BR)](https://img.shields.io/github/license/codecompanybrasil/community-mud-backend?label=Licen%C3%A7a%20(pt-BR)&style=flat-square)](https://www.gnu.org/licenses/quick-guide-gplv3.pt-br.html)
