@@ -61,8 +61,7 @@ DATABASE_USERNAME | String | root
 DATABASE_PASSWORD | String | **sem senha**
 DATABASE_SYNC | Boolean | false
 
-#### Observações sobre **DATABASE_SYNC**
-> **Warning**<br/>
+> **Warning** - Observações sobre **DATABASE_SYNC**<br/> 
 >_Embora a sincronização seja uma boa opção para sincronizar sua entidade com o banco de dados, ela não é segura para bancos de dados de produção. Caso utilize esse projeto em produção opte por implementar migrations ou atualizar pontualmente o banco de dados via comandos._
 
 <!-- 
