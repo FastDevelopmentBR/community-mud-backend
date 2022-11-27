@@ -77,11 +77,10 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 -->
+
+## Documentações
+[Diagramas e desenhos gerais](https://lucid.app/lucidchart/98fa7288-6732-41f7-b0e6-238db144aa13/edit?viewport_loc=-138%2C609%2C3774%2C1361%2C0_0&invitationId=inv_e4961edf-d7ca-4991-b01c-a1cd898a682f)
 
 ## Mantenedores
 
