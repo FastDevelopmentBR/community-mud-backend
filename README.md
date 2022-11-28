@@ -80,20 +80,17 @@ $ npm run test:cov
 -->
 
 ## Documentações
-[Google Drive](https://drive.google.com/drive/folders/19GYy39HNOUnAPsD6v0ji23vtTp7FQ0oi?usp=sharing)
+<a href="https://drive.google.com/drive/folders/19GYy39HNOUnAPsD6v0ji23vtTp7FQ0oi?usp=sharing" target="_blank">Google Drive</a>
 
 ## Mantenedores
-
 - [Pablo Pereira](https://github.com/pablopereira27)
 
 ## Tecnologias Utilizadas
-
 <a href="http://nestjs.com/" target="_blank">
     <img src="https://img.shields.io/static/v1?label=NestJS&message=9.0.0&logo=nestjs&logoColor=red&color=red&style=flat-square" alt="NestJS Version"/>
 </a>
 
 ## Licença
-
 [![Licença GPLv3](https://img.shields.io/github/license/codecompanybrasil/community-mud-backend?label=Licen%C3%A7a&style=flat-square)](LICENSE)
 
 O link abaixo contém uma tradução da licença que pode estar desatualizada em relação a versão utilizada no projeto.<br/>
