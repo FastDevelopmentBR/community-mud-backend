@@ -80,7 +80,7 @@ $ npm run test:cov
 -->
 
 ## Documentações
-[Diagramas e desenhos gerais](https://lucid.app/lucidchart/98fa7288-6732-41f7-b0e6-238db144aa13/edit?viewport_loc=-138%2C609%2C3774%2C1361%2C0_0&invitationId=inv_e4961edf-d7ca-4991-b01c-a1cd898a682f)
+[Google Drive](https://drive.google.com/drive/folders/19GYy39HNOUnAPsD6v0ji23vtTp7FQ0oi?usp=sharing)
 
 ## Mantenedores
 
