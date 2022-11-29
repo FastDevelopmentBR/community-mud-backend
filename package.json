@@ -7,11 +7,10 @@
         "email": "pablopereira27@gmail.com",
         "url": "https://www.linkedin.com/in/pablo-pereira-40032436/"
     },
-    "private": true,
+    "private": false,
     "license": "GPL-3.0",
     "bugs": {
-        "url": "https://github.com/codecompanybrasil/community-mud-backend/issues",
-        "email": "pablopereira27@gmail.com"
+        "url": "https://github.com/FastDevelopmentBR/community-mud-backend/issues"
     },
     "scripts": {
         "prebuild": "rimraf dist",
