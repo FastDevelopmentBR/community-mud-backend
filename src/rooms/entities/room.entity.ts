@@ -17,8 +17,7 @@ export class Room {
     title: string;
 
     @Column({
-        type: 'text',
-        nullable: true
+        type: 'text'
     })
     description: string;
 }

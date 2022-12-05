@@ -28,7 +28,7 @@
         "test:e2e": "jest --config ./test/jest-e2e.json",
         "db:create": "ts-node ./node_modules/typeorm-extension/dist/cli/index.js db:create",
         "db:drop": "ts-node ./node_modules/typeorm-extension/dist/cli/index.js db:drop",
-        "seed": "ts-node ./node_modules/typeorm-extension/dist/cli/index.js seed --config './ormconfig.js' --dataSource './database/data-source.ts'"
+        "seed": "ts-node ./node_modules/typeorm-extension/dist/cli/index.js seed --dataSource './database/data-source.ts'"
     },
     "dependencies": {
         "@nestjs/common": "^9.0.0",

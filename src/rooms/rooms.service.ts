@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
 import { Room } from './entities/room.entity';
 
 import { CreateRoomDto } from './dto/create-room.dto';
 import { UpdateRoomDto } from './dto/update-room.dto';
-import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class RoomsService {
@@ -15,23 +15,23 @@ export class RoomsService {
         private roomRepository: Repository<Room>,
     ) { }
 
-    create(createRoomDto: CreateRoomDto) {
-        return 'This action adds a new room';
+    create(createRoomDto: CreateRoomDto): Promise<Room> {
+        return this.roomRepository.save(createRoomDto)
     }
 
     findAll(): Promise<Room[]> {
         return this.roomRepository.find();
     }
 
-    findOne(id: number) {
-        return this.roomRepository.findOneBy({ id });
+    findOne(hash: string): Promise<Room> {
+        return this.roomRepository.findOneBy({ hash });
     }
 
-    update(id: number, updateRoomDto: UpdateRoomDto) {
-        return `This action updates a #${id} room`;
+    update(hash: string, updateRoomDto: UpdateRoomDto): Promise<any> {
+        return this.roomRepository.update({ hash }, updateRoomDto);
     }
 
-    remove(id: number) {
-        return `This action removes a #${id} room`;
+    remove(hash: string): Promise<any> {
+        return this.roomRepository.delete({ hash });
     }
 }
