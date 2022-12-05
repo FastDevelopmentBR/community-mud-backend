@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
 
 @Controller()
 export class AppController {
@@ -9,4 +9,8 @@ export class AppController {
         return 'Esse é o backend de um servidor que utiliza o CommunityMUD, se quiser saber sobre o projeto acesse https://github.com/FastDevelopmentBR/community-mud-backend'
     }
 
+    @Post('/login')
+    login(): boolean {
+        return true;
+    }
 }
