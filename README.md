@@ -26,6 +26,13 @@ Backend para MultiUser Dungeon, rpg baseado em texto.
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository. -->
 
+## Pré-requisitos
+
+- Necessário para rodar os seeders
+```bash
+npm install -g ts-node
+```
+
 ## Instalação
 
 ```bash
