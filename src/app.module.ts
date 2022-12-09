@@ -6,7 +6,6 @@ import generalConfig from './config/general.config';
 import databaseConfig from './config/database.config';
 
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
 
 import { RoomsModule } from './rooms/rooms.module';
 
@@ -37,6 +36,6 @@ import { RoomsModule } from './rooms/rooms.module';
         RoomsModule
     ],
     controllers: [AppController],
-    providers: [AppService],
+    providers: [],
 })
 export class AppModule { }
