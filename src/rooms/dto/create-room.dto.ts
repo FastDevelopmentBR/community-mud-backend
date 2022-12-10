@@ -1,4 +1,9 @@
+import { ApiProperty } from '@nestjs/swagger';
+
 export class CreateRoomDto {
-    title: string
-    description: string
+    @ApiProperty()
+    title: string;
+
+    @ApiProperty()
+    description: string;
 }

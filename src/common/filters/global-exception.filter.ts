@@ -4,7 +4,7 @@ import { Request, Response } from 'express';
 import { CannotCreateEntityIdMapError, EntityNotFoundError, QueryFailedError } from 'typeorm';
 // import { GlobalResponseError } from './global.response.error';
 
-// const redLog: string = '\x1b[31m'
+const redLog: string = '\x1b[31m'
 // const greenLog: string = '\x1b[32m'
 // const yellowLog: string = '\x1b[33m'
 // const magentaLog: string = '\x1b[35m'
@@ -23,7 +23,7 @@ export class GlobalExceptionFilter implements ExceptionFilter {
 
         // Logger.error(message, (exception as any).stack, `${request.method} ${request.url}`);
 
-        console.error('[Exception] -> ', exception);
+        console.error(redLog, '[Exception] ->', exception);
 
         switch (exception.constructor) {
             case HttpException:
