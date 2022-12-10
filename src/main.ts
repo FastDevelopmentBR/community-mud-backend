@@ -10,6 +10,7 @@ import { RoomsModule } from './rooms/rooms.module';
 
 const corsConfig = {
     origin: [
+        process.env.ADMIN_URL,
         process.env.GAME_URL
     ],
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
