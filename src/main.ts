@@ -21,6 +21,12 @@ async function bootstrap() {
         },
         logger: ['error', 'warn'],
     });
-    await app.listen(3000);
+
+    await app.listen(process.env.PORT, () => {
+        console.log('|-----------------------------------------------------------|')
+        console.log('|------------------- CommunityMUD Server -------------------|')
+        console.log('|-----------------------------------------------------------|')
+        console.log(`Server listening -> ${process.env.API_URL}`);
+    });
 }
 bootstrap();
