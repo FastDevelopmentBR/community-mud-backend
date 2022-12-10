@@ -9,7 +9,9 @@ import { AppModule } from './app.module';
 import { RoomsModule } from './rooms/rooms.module';
 
 const corsConfig = {
-    origin: [process.env.API_URL],
+    origin: [
+        process.env.GAME_URL
+    ],
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
     preflightContinue: false,
     optionsSuccessStatus: 204,
