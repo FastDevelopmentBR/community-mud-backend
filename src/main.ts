@@ -1,4 +1,6 @@
 import { NestFactory } from '@nestjs/core';
+import * as express from 'express';
+import * as path from "path";
 
 import { GlobalExceptionFilter } from './common/filters/global-exception.filter';
 
@@ -24,6 +26,9 @@ async function bootstrap() {
     });
 
     app.useGlobalFilters(new GlobalExceptionFilter())
+
+    // Public Assets Folder Access
+    app.use('/assets', express.static(path.join(__dirname, '/assets')));
 
     await app.listen(process.env.PORT, () => {
         console.log('|-----------------------------------------------------------|')

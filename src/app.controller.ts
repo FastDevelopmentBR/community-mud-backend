@@ -1,4 +1,4 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Controller, Get, Post, Res } from '@nestjs/common';
 
 @Controller()
 export class AppController {
@@ -7,6 +7,11 @@ export class AppController {
     @Get()
     getHello(): string {
         return 'Esse é o backend de um servidor que utiliza o CommunityMUD, se quiser saber sobre o projeto acesse https://github.com/FastDevelopmentBR/community-mud-backend'
+    }
+
+    @Get('/favicon.ico')
+    async getFavIcon(@Res() res: any): Promise<any> {
+        res.sendFile('favicon.ico', { root: __dirname });
     }
 
     @Post('/login')
