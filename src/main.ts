@@ -1,4 +1,7 @@
 import { NestFactory } from '@nestjs/core';
+
+import { GlobalExceptionFilter } from './common/filters/global-exception.filter';
+
 import { AppModule } from './app.module';
 
 const corsConfig = {
@@ -19,6 +22,8 @@ async function bootstrap() {
         cors: corsConfig,
         logger: ['error', 'warn'],
     });
+
+    app.useGlobalFilters(new GlobalExceptionFilter())
 
     await app.listen(process.env.PORT, () => {
         console.log('|-----------------------------------------------------------|')
