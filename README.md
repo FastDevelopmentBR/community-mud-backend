@@ -62,11 +62,15 @@ $ npm run seed
 
 Variável | Tipo | Default
 :------- | :--: | :------
-DATABASE_HOST | String | localhost
-DATABASE_PORT | Number | 3306
-DATABASE_USERNAME | String | root
-DATABASE_PASSWORD | String | **sem senha**
-DATABASE_SYNC | Boolean | false
+PORT | number | 3000
+API_URL | string | "http://localhost:3000"
+ADMIN_URL | string | undefined
+GAME_URL | string | undefined
+DATABASE_HOST | string | "localhost"
+DATABASE_PORT | number | 3306
+DATABASE_USERNAME | string | "root"
+DATABASE_PASSWORD | string | "" (**sem senha**)
+DATABASE_SYNC | boolean | false
 
 > **Warning** - Observações sobre **DATABASE_SYNC**<br/> 
 >_Embora a sincronização seja uma boa opção para sincronizar sua entidade com o banco de dados, ela não é segura para bancos de dados de produção. Caso utilize esse projeto em produção opte por implementar migrations ou atualizar pontualmente o banco de dados via comandos._
