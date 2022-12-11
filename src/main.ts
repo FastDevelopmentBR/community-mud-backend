@@ -50,17 +50,18 @@ async function bootstrap() {
         customfavIcon: './favicon.ico'
     }
 
-    SwaggerModule.setup('api', app, swaggerDocument, swaggerCustomOptions);
+    SwaggerModule.setup('docs', app, swaggerDocument, swaggerCustomOptions);
 
     // Public Assets Folder Access
     app.use('/assets', express.static(path.join(__dirname, '/assets')));
 
-    await app.listen(process.env.PORT, () => {
+    await app.listen(process.env.PORT || 3000, () => {
+        const apiUrl = process.env.API_URL || `http://localhost:${process.env.PORT || '3000'}`
         console.log('|-----------------------------------------------------------|')
         console.log('|------------------- CommunityMUD Server -------------------|')
         console.log('|-----------------------------------------------------------|')
-        console.log(`Server listening -> ${process.env.API_URL}`);
-        console.log(`Swagger Documentation -> ${process.env.API_URL}/api`);
+        console.log(`Server listening -> ${apiUrl}`);
+        console.log(`Swagger Documentation -> ${apiUrl}/docs`);
     });
 }
 bootstrap();
