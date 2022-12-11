@@ -8,23 +8,23 @@ import { GlobalExceptionFilter } from './common/filters/global-exception.filter'
 import { AppModule } from './app.module';
 import { RoomsModule } from './rooms/rooms.module';
 
-const corsConfig = {
-    origin: [
-        process.env.ADMIN_URL,
-        process.env.GAME_URL
-    ],
-    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
-    preflightContinue: false,
-    optionsSuccessStatus: 204,
-    credentials: true,
-    allowedHeaders: [
-        'Accept',
-        'Content-Type',
-        'Authorization',
-    ]
-}
-
 async function bootstrap() {
+    var corsConfig = {
+        origin: [],
+        methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
+        preflightContinue: false,
+        optionsSuccessStatus: 204,
+        credentials: true,
+        allowedHeaders: [
+            'Accept',
+            'Content-Type',
+            'Authorization',
+        ]
+    }
+
+    if (process.env.ADMIN_URL) corsConfig.origin.push(process.env.ADMIN_URL)
+    if (process.env.GAME_URL) corsConfig.origin.push(process.env.GAME_URL)
+
     const app = await NestFactory.create(AppModule, {
         cors: corsConfig,
         logger: ['error', 'warn'],
